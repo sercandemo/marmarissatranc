@@ -11,3 +11,5 @@ title: Yeni Haber
 Test
 
 ![](https://sercandemo.github.io/marmarissatranc/assets/images/fca.jpg)
+
+resmini altı
