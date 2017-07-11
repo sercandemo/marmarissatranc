@@ -7,4 +7,4 @@ permalink: turnuvalar
 
 - Temmuz 2017
 - [Ağustos 2017](turnuvalar/agustos)
-- [Eylül 2017] (turnuvalar/eylul)
+- [Eylül 2017](turnuvalar/eylul)
