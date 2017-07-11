@@ -3,7 +3,7 @@
 <div>
   {% for post in site.posts %}
     <p>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="marmarissatranc/{{ post.url | remove_first:'/'}}">{{ post.title }}</a></h2>
       {{ post.content | strip_html | truncatewords: 50 }}
     </p>
   {% endfor %}
