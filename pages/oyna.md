@@ -1,6 +1,6 @@
 ---
 title: Satranç Oyna
-permalink: marmarissatranc/oyna
+permalink: oyna
 ---
 
 Deneme
