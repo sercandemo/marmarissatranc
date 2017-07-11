@@ -1,6 +1,6 @@
 ---
-title:Ağustos Tunuvası
-permalink: /turnuvalar/agustos
+title: Ağustos Tunuvası
+permalink: turnuvalar/agustos
 ---
 
 Ağustos:
