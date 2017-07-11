@@ -1,6 +1,6 @@
 ---
 title:Ağustos Tunuvası
-permalink: turnuvalar/agustos
+permalink: marmarissatranc/turnuvalar/agustos
 ---
 
 Ağustos:
