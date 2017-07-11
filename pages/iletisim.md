@@ -1,6 +1,6 @@
 ---
 title:İletişim
-permalink: iletisim
+permalink: marmarissatranc/iletisim
 ---
 
 İletişim: 
