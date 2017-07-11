@@ -1,1 +1,9 @@
 theme: jekyll-theme-cayman
+
+title: [Marmaris İndigo Satranç Merkezi]
+description: [ ]
+
+google_analytics: 
+
+gems:
+  - jemoji
