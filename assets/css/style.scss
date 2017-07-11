@@ -1,0 +1,28 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#header_wrap .inner { padding: 20px 10px 20px 10px; }
+
+.menu {
+  margin-right: 10px;
+  z-index: 10;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+  background: #007edf;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.menulink {  
+  margin-right: 10px; 
+  color: #F2F2F2;
+}
+
+.page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
+@media screen and (min-width: 64em) { .page-header { padding: 2rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 2rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
