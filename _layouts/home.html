@@ -15,7 +15,7 @@
                 <div class="carousel-inner">
                     {% for resim in site.data.anasayfa.resimler %}
                     <div class="item {% if resim.sirano == 0 %}active {% endif %}">
-                        <img src="{{ resim.resimlink }}">
+                        <img src="{{ site.github.url }}{{ resim.resimlink }}">
                         <div class="carousel-caption">
                             <h4><a href="{{ resim.sayfalink }}">{{ resim.resimbaslik }}</a></h4>
                             <p>{{ resim.resimyazi }}
@@ -52,7 +52,7 @@
         </div>
         <div class="col-md-3">
             <div class="thumbnail">
-                <img src="/assets/images/fca.jpg" alt="">
+                <img src="{{ site.github.url }}/assets/images/fca.jpg" alt="">
                 <div class="caption">
                     <h4>Thumbnail label</h4>
                     <p>...</p>
