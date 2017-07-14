@@ -1,34 +1,34 @@
 resimler:
   - sirano: 0
-    resimlink: /assets/images/c0.jpg
+    resimlink: {{ site.github.repository_name }}/assets/images/c0.jpg
     sayfalink: /
     resimbaslik: resim baslik 0
     resimyazi: resim baslik 0 resim baslik 0 resim baslik 0
     yazi: resim baslik 0 resim baslik 0
 
   - sirano: 1
-    resimlink: /assets/images/c1.jpg
+    resimlink: {{ site.github.repository_name }}/assets/images/c1.jpg
     sayfalink: /
     resimbaslik: resim baslik 1
     resimyazi: resim baslik 1 resim baslik 1 resim baslik 1
     yazi: resim baslik 1 resim baslik 1
 
   - sirano: 2
-    resimlink: /assets/images/c2.jpg
+    resimlink: {{ site.github.repository_name }}/assets/images/c2.jpg
     sayfalink: /
     resimbaslik: resim baslik 2
     resimyazi: resim baslik 2 resim baslik 2 resim baslik 2
     yazi: resim baslik 2 resim baslik 2
 
   - sirano: 3
-    resimlink: /assets/images/c3.jpg
+    resimlink: {{ site.github.repository_name }}/assets/images/c3.jpg
     sayfalink: /
     resimbaslik: resim baslik 3
     resimyazi: resim baslik 3 resim baslik 3 resim baslik 3
     yazi: resim baslik 3 resim baslik 3
 
   - sirano: 4
-    resimlink: /assets/images/c4.jpg
+    resimlink: {{ site.github.repository_name }}/assets/images/c4.jpg
     sayfalink: /
     resimbaslik: resim baslik 4
     resimyazi: resim baslik 4 resim baslik 4 resim baslik 4
