@@ -1,1 +1,8 @@
 {{ content }}
+{% if pagedata.fotoflickr.size > 0 %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        {{ pagedata.fotoflickr }}
+    </div>
+</div>
+{% endif %}
