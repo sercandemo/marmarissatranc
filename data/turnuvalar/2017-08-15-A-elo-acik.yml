@@ -16,10 +16,10 @@ basvuru-form: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBz_wQUI41a
 basvuru-listesi: <iframe src="https://docs.google.com/spreadsheets/d/1CERDOGtM7Pc_lphN7DJMhusTBoKH3qd2pPlnJbty4Ao/pubhtml?widget=true&amp;headers=false" width="720" height="800"></iframe>
 
 program:
-  - gun: 10 Temmuz 2017 Cuma
+  - gun: 10 Ağustos 2017 Cuma
     turlar: Son Başvuru-19:00
 
-  - gun: 11 Temmuz 2017 Cumartesi
+  - gun: 11 Ağustos 2017 Cumartesi
     turlar: 1.Tur-10:00, 2.Tur-13:00, 3.Tur-16:00
 
   - gun: 12 Temmuz 2017 Pazar
@@ -33,6 +33,6 @@ oduller:
   - odul: ---
   - odul: En İyi Bayan Sporcu Satranç Takımı
 
-pgn: 2017-temmuz.pgn
+pgn: WijkaanZee2017.pgn
 
 fotoflickr: <a data-flickr-embed="true"  href="https://www.flickr.com/photos/134530188@N05/albums/72157657385063293" title="flickr"><img src="https://farm2.staticflickr.com/1469/23711010970_a71bd47585_z.jpg" width="640" height="427" alt="flickr"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
