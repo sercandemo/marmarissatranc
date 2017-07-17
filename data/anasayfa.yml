@@ -1,0 +1,35 @@
+resimler:
+  - sirano: 0
+    resimlink: /assets/images/51.jpg
+    sayfalink: /
+    resimbaslik: resim baslik 0
+    resimyazi: resim baslik 0 resim baslik 0 resim baslik 0
+    yazi: resim baslik 0 resim baslik 0
+
+  - sirano: 1
+    resimlink: /assets/images/52.jpg
+    sayfalink: /
+    resimbaslik: resim baslik 1
+    resimyazi: resim baslik 1 resim baslik 1 resim baslik 1
+    yazi: resim baslik 1 resim baslik 1
+
+  - sirano: 2
+    resimlink: /assets/images/53.jpg
+    sayfalink: /
+    resimbaslik: resim baslik 2
+    resimyazi: resim baslik 2 resim baslik 2 resim baslik 2
+    yazi: resim baslik 2 resim baslik 2
+
+  - sirano: 3
+    resimlink: /assets/images/54.jpg
+    sayfalink: /
+    resimbaslik: resim baslik 3
+    resimyazi: resim baslik 3 resim baslik 3 resim baslik 3
+    yazi: resim baslik 3 resim baslik 3
+
+  - sirano: 4
+    resimlink: /assets/images/55.jpg
+    sayfalink: /
+    resimbaslik: resim baslik 4
+    resimyazi: resim baslik 4 resim baslik 4 resim baslik 4
+    yazi: resim baslik 4 resim baslik 4
