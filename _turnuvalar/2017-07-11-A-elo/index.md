@@ -1,4 +1,4 @@
 ---
-title: turnuva
+title: Turnuva
 layout: turnuva
 ---
