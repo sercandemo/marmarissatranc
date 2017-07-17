@@ -36,7 +36,12 @@ Marmaris / Muğla <br/>
 
 <div class="panel panel-default">
   <div class="panel-body">
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:300px;width:%50;'><div id='gmap_canvas' style='height:300px;width:%100;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(36.85184108725203,28.250949371163863),mapTypeId: google.maps.MapTypeId.SATELLITE};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(36.85184108725203,28.250949371163863)});infowindow = new google.maps.InfoWindow({content:'<strong>İndigo Satranç Cafe</strong><br><br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+<iframe
+  width="100%"
+  height="300"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCLsr5EE3s338Y31Aa2jKgxf0Pv5TENff8&q=36.851696,28.250849&maptype=satellite" allowfullscreen>
+</iframe>
 
   </div>
 </div>
