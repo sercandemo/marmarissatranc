@@ -1,0 +1,4 @@
+---
+title: Sonuclar
+layout: turnuva
+---
