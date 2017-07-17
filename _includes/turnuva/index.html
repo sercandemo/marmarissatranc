@@ -1,0 +1,53 @@
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-2">
+        <col class="col-xs-6">
+    </colgroup>
+
+    <tbody>
+        <tr>
+            <th scope="row"> Turnuva Adı </th>
+            <td>{{ pagedata.adi }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Başlangıç - Bitiş Tarihleri </th>
+            <td>{{ pagedata.baslama-tarihi }} - {{ pagedata.bitis-tarihi }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Yer </th>
+            <td>{{ pagedata.yeri }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Son Başvuru Tarihi </th>
+            <td>{{ pagedata.son-basvuru-tarihi }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Düşünme Süresi </th>
+            <td>{{ pagedata.dusunme-suresi }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Sistem </th>
+            <td>{{ pagedata.sistem }}</td>
+        </tr>
+        <tr>
+            <th scope="row"> Yönerge </th>
+            <td><a href="{{ pagedata.yonerge }}" target="_blank"> {{ pagedata.yonerge }}</a></td>
+        </tr>
+    </tbody>
+</table>
+
+{% if pagedata.oduller.size > 0 %}
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Ödüller</h3> </div>
+    <div class="panel-body">
+        <strong>
+        {% for odul in pagedata.oduller %}
+              <h4 class="text-center">{{ odul.odul }}</h4>
+        {% endfor %}
+      </strong>
+    </div>
+</div>
+{% endif %}
+
+{{ content }}
