@@ -8,7 +8,7 @@
 
 {% include head.html %}
 {% if filename == 'oyunlar' %}
-  <link rel="stylesheet" href="/assets/css/pgnvjs.css">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/pgnvjs.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 {% endif %}
 
@@ -70,7 +70,7 @@
     {% include footer.html %}
 
     {% if filename == 'oyunlar' %}
-    <script src="/assets/js/pgnvjs.js" type="text/javascript"></script>
+    <script src="{{ site.github.url }}/assets/js/pgnvjs.js" type="text/javascript"></script>
     {% endif %}
 
     {% if filename == 'oyunlar' or filename == 'sonuclar' %}
