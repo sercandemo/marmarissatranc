@@ -1,13 +1,10 @@
 theme: jekyll-theme-cayman
 
+data_dir: data
+
 title: [Marmaris İndigo Satranç Merkezi]
 description: [ ]
-
-google_analytics: 
-
-gems:
-  - jemoji
-
+google_analytics:
 
 collections:
   turnuvalar:
