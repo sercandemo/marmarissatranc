@@ -70,7 +70,9 @@ function writeGamestoTabs() {
     }
     text += '</ul>' + '\n';
     text += '<div class="tab-content" style="margin-top:20px">' + '\n';
-    text += '<div role="tabpanel" class="tab-pane active" id="siralama">...</div>' + '\n';
+    text += '<div role="tabpanel" class="tab-pane active" id="siralama">';
+    text += parseResults();
+    text += '</div>' + '\n';
     for (var tour = 1; tour < games.length; tour++) {
         text += '<div role="tabpanel" class="tab-pane" id="tur' + tour + '">' + '\n';
 
@@ -149,3 +151,53 @@ $('#oyunsec').click(function(e) {
     var board = pgnView('board', cfg);
 
 });
+
+function parseResults() {
+
+
+    var text = "Sıralama yüklenmedi.";
+
+    $.get('siralama.txt', function(data) {
+
+        text = "";
+        var lines = data.split("\n");
+        var header = lines[2].split(";");
+
+        text += '<table class="table table-bordered table-striped">' + '\n';
+        text += '<tbody>' + '\n';
+
+        text += '<tr>';
+        text += '<th>' + header[0] + '</th>';
+        text += '<th>' + header[1] + '</th>';
+        text += '<th>' + header[3] + '</th>';
+        text += '<th>' + header[4] + '</th>';
+        text += '<th>' + header[6] + '</th>';
+        text += '<th>' + header[7] + '</th>';
+        text += '<th>' + header[21] + '</th>';
+        text += '<th>' + header[26] + '</th>';
+        text += '<th>' + header[27] + '</th>';
+        text += '<th>' + header[28] + '</th>';
+        text += '<th>' + header[29] + '</th>';
+        text += '<th>' + header[30] + '</th>';
+        text += '</tr>';
+
+        var v = [0, 1, 3, 4, 6, 7, 21, 26, 27, 28, 29, 30];
+
+        for (var line = 3; line < lines.length-1; line++) {
+            var l = lines[line].split(";");
+            console.log(l);
+            text += '<tr>' + '\n';
+            for (var i = 0; i < v.length; i++) {
+
+                text += '<td scope = "row" >' + l[v[i]] + '</td>' + '\n';
+            }
+            text += '</tr>' + '\n';
+        }
+
+        text += '</tbody>' + '\n';
+        text += '</table>' + '\n';
+
+    }, "text");
+
+    return text;
+}
