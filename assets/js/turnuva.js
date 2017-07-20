@@ -1,3 +1,4 @@
+jQuery.ajaxSetup({async:false});
 var games = [
     []
 ];
