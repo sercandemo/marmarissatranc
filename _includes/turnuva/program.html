@@ -1,37 +1,44 @@
- {% if pagedata.program.size > 0 %}
+{% if pagedata.programlar.size > 0 %}
 
-<table class="table table-bordered table-striped">
-    <colgroup>
-        <col class="col-xs-3">
-        <col class="col-xs-3">
-        <col class="col-xs-2">
-    </colgroup>
+{% for program in pagedata.programlar %}
 
-    <thead>
-        <tr>
-            <th>Gün</th>
-            <th>Tur</th>
-            <th>Saat</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for p in pagedata.program %} {% assign turlar = p.turlar | split: "," %}
-        <tr>
-            <td scope="row" rowspan="{{ turlar | size }}"> {{ p.gun }}</td>
-            <td> {{ turlar[0] | split: "-" | first }} </td>
-            <td> {{ turlar[0] | split: "-" | last }} </td>
-        </tr>
-        {% if p.turlar contains "," %}
-        </tr>
-        {% for t in turlar offset:1 %}
-        <tr>
-            <td> {{ turlar[forloop.index] | split: "-" | first }} </td>
-            <td> {{ turlar[forloop.index] | split: "-" | last }} </td>
-        </tr>
-        {% endfor %} {% else %} {% endif %} {% endfor %}
+  <h4> {{ program.program.adi }} </h4>
 
-    </tbody>
-</table>
+  <table class="table table-bordered table-striped">
+      <colgroup>
+          <col class="col-xs-3">
+          <col class="col-xs-3">
+          <col class="col-xs-2">
+      </colgroup>
+
+      <thead>
+          <tr>
+              <th>Gün</th>
+              <th>Tur</th>
+              <th>Saat</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for p in program.program.tablo %}
+          {% assign turlar = p.turlar | split: "," %}
+          <tr>
+              <td scope="row" rowspan="{{ turlar | size }}"> {{ p.gun }}</td>
+              <td> {{ turlar[0] | split: "-" | first }} </td>
+              <td> {{ turlar[0] | split: "-" | last }} </td>
+          </tr>
+          {% if p.turlar contains "," %}
+          </tr>
+          {% for t in turlar offset:1 %}
+          <tr>
+              <td> {{ turlar[forloop.index] | split: "-" | first }} </td>
+              <td> {{ turlar[forloop.index] | split: "-" | last }} </td>
+          </tr>
+          {% endfor %} {% else %} {% endif %} {% endfor %}
+
+      </tbody>
+  </table>
+
+{% endfor %}
 
 {% endif %}
 
