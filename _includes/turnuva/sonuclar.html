@@ -1,3 +1,22 @@
-<div id="sonuclar"> </div>
+
+<h4> Kategoriler </h4>
+<div style="margin-top:20px"></div>
+<ul class="nav nav-pills" role="tablist">
+    {% assign kategoriler = pagedata.kategoriler | split: "," %}
+    {% assign kategori-adlari = pagedata.kategori-adlari | split: "," %}
+    {% for kategori in kategoriler %}
+    <li role="presentation" class="{% if forloop.index0 == 0 %}active {% endif %}"><a href="#kategori-{{ kategori | strip }}" aria-controls="kategori-{{ kategori | strip }}" role="tab" data-toggle="tab">{{ kategori-adlari[forloop.index0] | strip }}</a></li>
+    {% endfor %}
+</ul>
+
+<div style="margin-top:20px"></div>
+<div class="tab-content">
+
+    {% for kategori in kategoriler %}
+    <div role="tabpanel" class="tab-pane {% if forloop.index0 == 0 %}active {% endif %}" id="kategori-{{ kategori  | strip }}"></div>
+    {% endfor %}
+
+</div>
 
 {{ content }}
+
