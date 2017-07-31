@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+    
+    <div class="media">
+        <div class="media-left">
+
+            <img class="media-object" src="{{ site.github.url }}/assets/images/{{ page.image }}" alt="...">
+
+        </div>
+        <div class="media-body">
+            {{ content }}
+        </div>
+    </div>
+
+
+    {% include footer.html %} {% include google_analytics.html %}
+</body>
+
+</html>
