@@ -9,3 +9,13 @@ google_analytics:
 collections:
   turnuvalar:
     output: true
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
