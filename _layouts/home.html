@@ -48,7 +48,6 @@
             </div>
             <!-- End Carousel -->
 
-
         </div>
         <div class="col-md-3">
             <div class="thumbnail">
@@ -67,6 +66,25 @@
 
     <div class="row">
         <div class="col-md-9">
+
+            <div>
+                {% for post in site.posts %}
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <img src="{{ site.github.url }}/assets/images/{{ post.image }}" alt="" class="img-responsive img-thumbnail">
+                    </div>
+
+                    <div class="col-md-9">
+                        <p>
+                            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> {{ post.content | strip_html | truncatewords: 50 }}
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+
         </div>
         <div class="col-md-3">
             <div class="thumbnail">
@@ -82,8 +100,8 @@
 
     <div class="row">
         <div class="col-md-8">
-
         </div>
+
         <div class="col-md-4">
             <div class="pull-right">
                 <script src="https://en.lichess.org/training/embed?theme=auto&bg=auto"></script>
