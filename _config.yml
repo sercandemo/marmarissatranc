@@ -10,8 +10,6 @@ collections:
   turnuvalar:
     output: true
 
-permalink: pretty
-
 defaults:
   -
     scope:
