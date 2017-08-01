@@ -1,6 +1,0 @@
----
-title: Oyuncular
-layout: turnuva
----
-
-
