@@ -134,7 +134,7 @@ function writeGamestoTabs(resultsFileName, category, games) {
 
 function fillGamesCombobox(category, games) {
 
-    var text = "";
+    var text = "<option value='N.N.N'> Oyun Seçiniz </option>";
     for (var tour = 1; tour < games.length; tour++) {
         for (var g = 0; g < games[tour].length; g++) {
 
@@ -152,25 +152,28 @@ function fillGamesCombobox(category, games) {
 }
 
 
-$('[id^=oyunsec]').click(function(e) {
+$('[id^=oyunsec]').change(function(e) {
     var roundTable = $(e.target).val();
     roundTable = roundTable.split(".");
     var category = roundTable[0];
     var round = roundTable[1];
     var table = roundTable[2];
-    var pgn = allGames[category][round][table - 1]["notation"];
-    var cfg = {
-        pgn: pgn,
-        locale: 'en',
-        pieceStyle: 'merida'
-    };
-    var board = pgnView('board', cfg);
+    if (category !== "N") {
+        var pgn = allGames[category][round][table - 1]["notation"];
+        var cfg = {
+            pgn: pgn,
+            locale: 'en',
+            pieceStyle: 'merida'
+        };
+        var board = pgnView('board', cfg);
 
-    var text = allGames[category][round][table - 1]["white"] + " ";
-    text += allGames[category][round][table - 1]["result"] + " ";
-    text += allGames[category][round][table - 1]["black"] + " ";
-    text = "<p>" + text + "</p>";
-    $('#oyun').html(text);
+        var text = allGames[category][round][table - 1]["white"] + " ";
+        text += allGames[category][round][table - 1]["result"] + " ";
+        text += allGames[category][round][table - 1]["black"] + " ";
+        text = "<p>" + text + "</p>";
+        $('#oyun').html(text);
+    }
+
 });
 
 
