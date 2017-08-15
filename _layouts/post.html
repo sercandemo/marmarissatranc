@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="tr">
 
+
+
 {% include head.html %}
 
 <body>
 
     {% include header.html %}
-    
-    <div class="media">
-        <div class="media-left">
 
-            <img class="media-object" src="{{ site.github.url }}/assets/images/{{ page.image }}" alt="...">
+<div class="row">
 
-        </div>
-        <div class="media-body">
-            {{ content }}
-        </div>
-    </div>
+  <div class="col-md-12">
+    <h3>{{ page.title }}</h3>
+    <p class="text-muted text-left">
+    {% assign dy = page.date | date: "%A" %}
+    {{ site.data.tr.[dy] }},
+    {{ page.date | date: "%-d" }}
+    {% assign m = page.date | date: "%-m" | minus: 1 %}
+    {{ site.data.tr.months[m] }}
+    {{ page.date | date: "%Y" }}
+    {{ page.date | date: " %H:%M" }}
+    </p>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-3">
+    <img src="{{ site.github.url }}/assets/images/{{ page.image }}" alt="" class="img-responsive img-thumbnail">
+  </div>
+
+  <div class="col-md-9">
+  <p>{{ content }}</p>
+  </div>
+
+</div>
 
 
     {% include footer.html %} {% include google_analytics.html %}

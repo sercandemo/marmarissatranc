@@ -1,16 +1,27 @@
 body {
   padding-top: 10px;
+  background-color: #ededed;
 }
 
 .navbar {
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .container {
-  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+.container-new {
+  background-color: #fff;
+  box-shadow: 0 0 10px #999;
+}
+
+.banner {
+  max-height: 90px;
+  margin-bottom: 10px;
+}
 
 
 #myCarousel .carousel-caption {
@@ -36,11 +47,12 @@ body {
 	background-color:#eee;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
 	#myCarousel {padding-right:33.3333%;}
 	#myCarousel .carousel-controls {display:none;}
 }
-@media (max-width: 899px) {
+
+@media (max-width: 991px) {
 	.carousel-caption p,
 	#myCarousel .list-group {display:none;}
 }

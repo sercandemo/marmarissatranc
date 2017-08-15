@@ -8,8 +8,8 @@
     {% include header.html %}
 
     <div class="row">
-        <div class="col-md-9">
-            <div id="myCarousel" class="carousel slide" style="box-shadow: 0px 0px 5px #333" data-ride="carousel">
+        <div class="col-md-9 col-sm-8 col-xs-9">
+            <div id="myCarousel" class="carousel slide" style="box-shadow: 0px 0px 5px #999" data-ride="carousel">
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
@@ -29,8 +29,11 @@
                 <ul class="list-group col-sm-4" style="padding-right:0px;">
 
                     {% for resim in site.data.anasayfa.resimler %}
-                    <li data-target="#myCarousel" data-slide-to="{{ resim.sirano }}" class="list-group-item {% if resim.sirano == 0 %}active {% endif %}">
-                        <p>{{ resim.yazi }}</p>
+                    <li data-target="#myCarousel" data-slide-to="{{ resim.sirano }}" class="list-group-item {% if resim.sirano == 0 %}active {% endif %}" style="line-height:1.25;padding:3px 10px">
+                        <strong><small>{{ resim.yazi }}</small></strong>
+                    <p>
+                        <small>Salı, 15 Haziran 2017</small>
+                    </p>
                     </li>
                     {% endfor %}
                 </ul>
@@ -49,16 +52,11 @@
             <!-- End Carousel -->
 
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-3 col-sm-4 col-xs-3">
             <div class="thumbnail">
-                <img src="{{ site.github.url }}/assets/images/kose.jpg" alt="" class="img-responsive">
+                <img src="{{ site.github.url }}/assets/images/logo300.png" alt="" class="img-responsive">
                 <div class="caption">
-                    <p>
-                        <a href="https://www.facebook.com/indigosatranccafe/" target="_blank">
-                            <img src="{{ site.github.url }}/assets/images/FB-f-Logo__blue_50.png" alt="" class="pull-right img-responsive">
-                        </a>
-                        <h4> Bizi takip edin! </h4>
-                    </p>
                 </div>
             </div>
         </div>
@@ -67,26 +65,57 @@
     <div class="row">
         <div class="col-md-9">
 
-            <div>
-                {% for post in site.posts %}
-                <div class="row">
+{% assign poffset = paginator.page | times:5  %}
+{% assign ptotal = paginator.total_pages | minus:1  %}
 
-                    <div class="col-md-3">
-                        <img src="{{ site.github.url }}/assets/images/{{ post.image }}" alt="" class="img-responsive img-thumbnail">
-                    </div>
+{% if true %}
+    {% for post in site.posts limit:5 offset:poffset %}
+            <div class="row">
 
-                    <div class="col-md-9">
-                        <p>
-                            <h3><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h3> {{ post.content | strip_html | truncatewords: 50 }}
-                        </p>
-                    </div>
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                    <a href="{{ post.url | prepend: site.github.url }}"><img src="{{ site.github.url }}/assets/images/{{ post.image }}" alt="" class="img-responsive img-thumbnail" style="margin-top:15px"></a>
                 </div>
-                <hr>
-                {% endfor %}
+
+                <div class="col-xs-8 col-sm-9 col-md-9">
+                    <h3><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h3>
+                    <p class="text-muted text-right">
+                        {% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }} {{ post.date | date: " %H:%M" }}
+                    </p>
+                    <p>
+                        {{ post.content | strip_html | truncatewords: 50 }}
+                        <a href="{{ post.url | prepend: site.github.url }}"> devamı</a>
+                    </p>
+                </div>
             </div>
+            <hr> {% endfor %}
+{% else %}
+    {% for post in paginator.posts %}
+            <div class="row">
+
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                    <a href="{{ post.url | prepend: site.github.url }}"><img src="{{ site.github.url }}/assets/images/{{ post.image }}" alt="" class="img-responsive img-thumbnail" style="margin-top:15px"></a>
+                </div>
+
+                <div class="col-xs-8 col-sm-9 col-md-9">
+                    <h3><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h3>
+                    <p class="text-muted text-right">
+                        {% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }} {{ post.date | date: " %H:%M" }}
+                    </p>
+                    <p>
+                        {{ post.content | strip_html | truncatewords: 50 }}
+                        <a href="{{ post.url | prepend: site.github.url }}"> devamı</a>
+                    </p>
+                </div>
+            </div>
+            <hr> {% endfor %}
+{% endif %}
+
+
+
 
         </div>
         <div class="col-md-3">
+            <script src="https://en.lichess.org/training/embed?theme=auto&bg=auto"></script>
             <div class="thumbnail">
                 <a href="https://lisans.tsf.org.tr/online/" target="_blank">
                     <img src="{{ site.github.url }}/assets/images/banner_lisans.jpg" alt="" class="img-responsive">
@@ -95,6 +124,7 @@
                     <img src="{{ site.github.url }}/assets/images/banner_ukd.jpg" alt="" class="img-responsive">
                 </a>
             </div>
+
         </div>
     </div>
 
@@ -104,10 +134,37 @@
 
         <div class="col-md-4">
             <div class="pull-right">
-                <script src="https://en.lichess.org/training/embed?theme=auto&bg=auto"></script>
+
             </div>
         </div>
     </div>
+
+{% if ptotal > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..ptotal) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+
 
     {% include footer.html %}
     <script src="{{ site.github.url }}/assets/js/home.js"></script>

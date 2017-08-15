@@ -1,8 +1,9 @@
 ---
-title:  "Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası"
-date:   2017-07-11 16:16:01 -0600
+title:  Sezonun Son Turnuvası!! ÖDÜLLÜ Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası
+date:   2017-05-15 13:30:00
 image: mayis_2017_web.jpg
 ---
+
 Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası C ve D Kategorileri için 27 – 28 Mayıs 2017, A ve B Kategorileri için 3 - 4 Haziran 2017 tarihlerinde Marmaris İndigo Satranç Cafe'de ( Vatan Cad. No:28 Armutalan / eski engelli cafe) gerçekleştirilecek.
 Turnuva sonunda ilk üç sırayı alanlar altın ve kupa, D Kategorisinde yarışan bütün sporcular madalya ile ödüllendirilecek. Marmaris İndigo Satranç Merkezi’nin gerçekleştireceği yarışmaya kayıt yaptırmadan önce mutlaka Haberin Devamını okuyun.
 Kayıt için son başvuru tarihi 26 Mayıs 2017 saat 20.00'dir.
