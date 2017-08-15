@@ -65,9 +65,7 @@
     <div class="row">
         <div class="col-md-9">
 
-            {% assign poffset = paginator.page | times:5 %}
-            {% assign ptotal = paginator.total_pages | minus:1 %}
-            {% for post in site.posts limit:5 offset:poffset %}
+            {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %} {% for post in site.posts limit:5 offset:poffset %}
             <div class="row">
 
                 <div class="col-xs-4 col-sm-3 col-md-3">
@@ -90,6 +88,7 @@
         </div>
         <div class="col-md-3">
             <script src="https://en.lichess.org/training/embed?theme=auto&bg=auto"></script>
+            <script src="https://en.lichess.org/tv/embed?theme=auto&bg=auto"></script>
             <div class="thumbnail">
                 <a href="https://lisans.tsf.org.tr/online/" target="_blank">
                     <img src="{{ site.github.url }}/assets/images/banner_lisans.jpg" alt="" class="img-responsive">
@@ -98,24 +97,41 @@
                     <img src="{{ site.github.url }}/assets/images/banner_ukd.jpg" alt="" class="img-responsive">
                 </a>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Destekçilerimiz</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="http://www.mimartmimarlik.net/" target="_blank">
+                        <img src="{{ site.github.url }}/assets/images/mimart.jpg" alt="" class="img-responsive center-block" style="margin-bottom:20px">
+                    </a>
+                    <a href="http://marmaris.indigosatranc.com/anasayfa/selimiye_yazlik" target="_blank">
+                        <img src="{{ site.github.url }}/assets/images/selimiyelogoweb.jpg" alt="" class="img-responsive center-block" style="margin-bottom:20px">
+                    </a>
+                    <a href="http://www.marti.com.tr/" target="_blank">
+                        <img src="{{ site.github.url }}/assets/images/marti.jpg" alt="" class="img-responsive center-block">
+                    </a>
+
+                </div>
+            </div>
 
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-9 text-center" style="font-size:16px">
-                {% if ptotal > 1 %}
-                <div class="pagination">
-                    {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Geri</a> {% else %}
-                    <span>&laquo; Geri</span> {% endif %} {% for page in (1..ptotal) %} {% if page == paginator.page %}
-                    <em>{{ page }}</em> {% elsif page == 1 %}
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a> {% else %}
-                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a> {% endif %} {% endfor %} {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">İleri &raquo;</a> {% else %}
-                    <span>İleri &raquo;</span> {% endif %}
-                </div>
-                {% endif %}
+            {% if ptotal > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Geri</a> {% else %}
+                <span>&laquo; Geri</span> {% endif %} {% for page in (1..ptotal) %} {% if page == paginator.page %}
+                <em>{{ page }}</em> {% elsif page == 1 %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a> {% else %}
+                <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a> {% endif %} {% endfor %} {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">İleri &raquo;</a> {% else %}
+                <span>İleri &raquo;</span> {% endif %}
+            </div>
+            {% endif %}
         </div>
 
         <div class="col-md-4">
