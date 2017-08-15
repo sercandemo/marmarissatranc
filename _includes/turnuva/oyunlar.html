@@ -14,7 +14,7 @@
 
     {% for kategori in kategoriler %}
     <div role="tabpanel" class="tab-pane {% if forloop.index0 == 0 %}active {% endif %}" id="oyunlar-{{ kategori  | strip }}">
-    <select id="oyunsec-{{ kategori  | strip }}" multiple class="form-control" style="margin-bottom:20px"></select>
+    <select id="oyunsec-{{ kategori  | strip }}" class="form-control" style="margin-bottom:20px"></select>
 </div>
     {% endfor %}
 

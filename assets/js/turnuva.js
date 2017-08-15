@@ -134,7 +134,7 @@ function writeGamestoTabs(resultsFileName, category, games) {
 
 function fillGamesCombobox(category, games) {
 
-    var text = "";
+    var text = "<option>Oyun seçiniz</option>";
     for (var tour = 1; tour < games.length; tour++) {
         for (var g = 0; g < games[tour].length; g++) {
 
