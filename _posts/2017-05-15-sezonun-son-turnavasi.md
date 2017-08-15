@@ -1,5 +1,5 @@
 ---
-title:  Sezonun Son Turnuvası!! ÖDÜLLÜ Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası
+title:  Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası
 date:   2017-05-15 13:30:00
 image: mayis_2017_web.jpg
 ---

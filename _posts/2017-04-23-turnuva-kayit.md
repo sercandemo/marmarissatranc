@@ -1,7 +1,7 @@
 ---
-title:  Marmaris İndigo 13. Geleneksel 23 Nisan Satranç Turnuvası C ve D Kategorisi Kayıtları Devam Ediyor.
+title:  13. Geleneksel 23 Nisan Satranç Turnuvası C ve D Kategorisi Kayıtları Devam Ediyor.
 date:   2017-04-23 14:30:00
-image: mayis_2017_web.jpg
+image: indigo_cafe.jpg
 ---
 
 Marmaris Ticaret Odası 13. Geleneksel 23 Nisan Satranç Turnuvası C ve D Kategorileri için 29 – 30 Nisan 2017 tarihlerinde Marmaris İndigo Satranç Cafe'de ( Vatan Cad. No:28 Armutalan / eski engelli cafe) gerçekleştirilecek.

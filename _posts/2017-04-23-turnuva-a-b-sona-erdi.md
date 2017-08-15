@@ -1,7 +1,7 @@
 ---
-title:  Marmaris İndigo 13. Geleneksel 23 Nisan ELO Satranç Turnuvası A ve B Kategorisi Maçları Sona Erdi
+title:  13. Geleneksel 23 Nisan ELO Satranç Turnuvası A ve B Kategorisi Maçları Sona Erdi
 date:   2017-04-23 15:30:00
-image: mayis_2017_web.jpg
+image: indigo_cafe.jpg
 ---
 
 Marmaris İndigo Satranç tarafından düzenlenen Marmaris İndigo 13. Geleneksel 23 Nisan ELO Satranç Turnuvası A ve B Kategorisi maçları 23 Nisan 2017 Pazar günü düzenlenen ödül töreniyle sona erdi.
