@@ -64,8 +64,7 @@
 
     <div class="row">
         <div class="col-md-9">
-
-            {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %} {% for post in site.posts limit:5 offset:poffset %}
+            <hr> {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %} {% for post in site.posts limit:5 offset:poffset %}
             <div class="row">
 
                 <div class="col-xs-4 col-sm-3 col-md-3">
@@ -76,7 +75,8 @@
 
                     <p class="text-muted text-right">
                         {% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }}
-                    </p><h4><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h4>
+                    </p>
+                    <h4><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h4>
                     <p>
                         {{ post.content | strip_html | truncatewords: 50 }}
                         <a href="{{ post.url | prepend: site.github.url }}"> devamı</a>
