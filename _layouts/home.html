@@ -13,12 +13,12 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    {% for resim in site.data.anasayfa.resimler %}
-                    <div class="item {% if resim.sirano == 0 %}active {% endif %}">
-                        <img src="{{ site.github.url }}{{ resim.resimlink }}">
+                    {% for post in site.posts limit:5 %}
+                    <div class="item {% if forloop.index0 == 0 %}active {% endif %}">
+                        <img src="{{ site.github.url }}/assets/images/53.jpg">
                         <div class="carousel-caption">
-                            <h4><a href="{{ resim.sayfalink }}">{{ resim.resimbaslik }}</a></h4>
-                            <p>{{ resim.resimyazi }}
+                            <h4><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h4>
+                            <p>{{ post.content | strip_html | truncatewords: 15 }}
                             </p>
                         </div>
                     </div>
@@ -28,12 +28,12 @@
 
                 <ul class="list-group col-sm-4" style="padding-right:0px;">
 
-                    {% for resim in site.data.anasayfa.resimler %}
-                    <li data-target="#myCarousel" data-slide-to="{{ resim.sirano }}" class="list-group-item {% if resim.sirano == 0 %}active {% endif %}" style="line-height:1.25;padding:3px 10px">
-                        <strong><small>{{ resim.yazi }}</small></strong>
-                    <p>
-                        <small>Salı, 15 Haziran 2017</small>
-                    </p>
+                    {% for post in site.posts limit:5 %}
+                    <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" class="list-group-item {% if forloop.index0 == 0 %}active {% endif %}" style="line-height:1.25;padding:3px 10px">
+                        <strong><small>{{ post.title }}</small></strong>
+                        <p>
+                            <small>{% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }} </small>
+                        </p>
                     </li>
                     {% endfor %}
                 </ul>
@@ -65,11 +65,9 @@
     <div class="row">
         <div class="col-md-9">
 
-{% assign poffset = paginator.page | times:5  %}
-{% assign ptotal = paginator.total_pages | minus:1  %}
-
-{% if true %}
-    {% for post in site.posts limit:5 offset:poffset %}
+            {% assign poffset = paginator.page | times:5 %}
+            {% assign ptotal = paginator.total_pages | minus:1 %}
+            {% for post in site.posts limit:5 offset:poffset %}
             <div class="row">
 
                 <div class="col-xs-4 col-sm-3 col-md-3">
@@ -88,30 +86,6 @@
                 </div>
             </div>
             <hr> {% endfor %}
-{% else %}
-    {% for post in paginator.posts %}
-            <div class="row">
-
-                <div class="col-xs-4 col-sm-3 col-md-3">
-                    <a href="{{ post.url | prepend: site.github.url }}"><img src="{{ site.github.url }}/assets/images/{{ post.image }}" alt="" class="img-responsive img-thumbnail" style="margin-top:15px"></a>
-                </div>
-
-                <div class="col-xs-8 col-sm-9 col-md-9">
-                    <h3><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h3>
-                    <p class="text-muted text-right">
-                        {% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }} {{ post.date | date: " %H:%M" }}
-                    </p>
-                    <p>
-                        {{ post.content | strip_html | truncatewords: 50 }}
-                        <a href="{{ post.url | prepend: site.github.url }}"> devamı</a>
-                    </p>
-                </div>
-            </div>
-            <hr> {% endfor %}
-{% endif %}
-
-
-
 
         </div>
         <div class="col-md-3">
@@ -129,42 +103,25 @@
     </div>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9 text-center" style="font-size:16px">
+                {% if ptotal > 1 %}
+                <div class="pagination">
+                    {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Geri</a> {% else %}
+                    <span>&laquo; Geri</span> {% endif %} {% for page in (1..ptotal) %} {% if page == paginator.page %}
+                    <em>{{ page }}</em> {% elsif page == 1 %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a> {% else %}
+                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a> {% endif %} {% endfor %} {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">İleri &raquo;</a> {% else %}
+                    <span>İleri &raquo;</span> {% endif %}
+                </div>
+                {% endif %}
         </div>
 
         <div class="col-md-4">
-            <div class="pull-right">
 
-            </div>
         </div>
     </div>
-
-{% if ptotal > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..ptotal) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
-
 
     {% include footer.html %}
     <script src="{{ site.github.url }}/assets/js/home.js"></script>
