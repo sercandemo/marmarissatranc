@@ -14,12 +14,13 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     {% for post in site.posts limit:5 %}
+                    {% include image_select.html %}
                     <div class="item {% if forloop.index0 == 0 %}active {% endif %}">
-                        {% if post.image %}
-                          {% assign carousel-image = post.image %}
-                        {% else %}
-                          {% assign carousel-image = site.data.constants.carousel-default-image %}
-                        {% endif %}
+                      {% if imagepath != '' %}
+                        {% assign carousel-image = imagepath %}
+                      {% else %}
+                        {% assign carousel-image = site.data.constants.carousel-default-image %}
+                      {% endif %}
                         <img src="{{ site.github.url }}/assets/images/{{ carousel-image }}" style="min-width: 500px !important; max-height: 300px !important;">
                         <div class="carousel-caption">
                             <h4><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h4>
@@ -69,8 +70,7 @@
 
     <div class="row">
         <div class="col-md-9">
-            <hr> {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %}
-            {% for post in site.posts limit:5 offset:poffset %}
+            <hr> {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %} {% for post in site.posts limit:5 offset:poffset %}
             <div class="row">
 
                 <div class="col-xs-4 col-sm-3 col-md-3">

@@ -1,0 +1,11 @@
+                    {% assign imagepath = '' %}
+                    {% if post.image %}
+                      {% assign imagepath = post.image %}
+                    {% else %}
+                      {% assign post_filename = post.path | replace_first: '_posts/', '' | replace_first: '.md', '' | prepend:'/assets/images/' %}
+                      {% for static_file in site.static_files %}
+                        {% if static_file.path contains post_filename   %}
+                          {% assign imagepath = static_file.name %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}

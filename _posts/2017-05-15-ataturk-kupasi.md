@@ -1,7 +1,5 @@
 ---
 title: Marmaris İndigo 19 Mayıs Atatürk Kupası Satranç Turnuvası
-date:  2017-05-15
-image: 2017-05-27-ataturk-kupasi-afis.jpg
 turnuva: 2017-05-27-ataturk-kupasi
 ---
 

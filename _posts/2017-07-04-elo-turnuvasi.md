@@ -1,7 +1,5 @@
 ---
 title:  Marmaris İndigo Temmuz 2017 Ödüllü ELO Satranç Turnuvası
-date:   2017-07-04
-image:
 turnuva: 2017-07-08-temmuz-elo
 ---
 
