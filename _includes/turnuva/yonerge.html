@@ -14,11 +14,17 @@
         <tr>
             <th scope="row"> Yönerge </th>
             <td>
-                <ul>
+
+                {% if pagedata.yonerge-kategori %}
+                    <ul>
                     {% for kategori in kategoriler %}
-                    <li><a href="{{ dataname }}-yonerge-{{ kategori | strip}}.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori-{{ kategori | strip }} </a></li>
-                    {% endfor %}
-                </ul>
+                    <li><a href="{{ dataname }}-yonerge-{{ kategori | strip}}.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori-{{ kategori | strip }} </a></li>{% endfor %}
+                    </ul>
+                {% else %}
+                    <a href="{{ dataname }}-yonerge-A.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori-A </a>
+                {% endif %}
+
+
             </td>
         </tr>
     </tbody>
