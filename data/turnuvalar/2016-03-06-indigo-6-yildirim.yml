@@ -1,0 +1,11 @@
+adi: Marmaris İndigo 6. Yıldırım ELO Turnuvası
+
+kategoriler: A
+kategori-adlari: Açık
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 6 Mart 2016 Pazar
+             turlar: 1.Tur-10:00,2.Tur-10:20,3.Tur-10:40,4.Tur-11:00,5.Tur-11:20
