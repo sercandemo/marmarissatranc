@@ -1,5 +1,6 @@
 ---
 title: ELO Değişimleri Açıklandı
+image: fide.jpg
 ---
 
 Gerçekleşen turnuvaların FIDE tarafından açıklanan ELO değişimleri ilgili linklerdedir.  

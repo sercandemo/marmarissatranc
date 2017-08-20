@@ -1,5 +1,6 @@
 ---
 title: UKD Sonuçları Açıklandı
+image: tsf.jpg
 ---
 
 Gerçekleşen turnuvaların UKD puanları ilgili linklerdedir.  

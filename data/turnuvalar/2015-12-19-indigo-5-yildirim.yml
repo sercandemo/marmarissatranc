@@ -1,0 +1,11 @@
+adi: Marmaris İndigo 5. Yıldırım ELO Turnuvası
+
+kategoriler: A
+kategori-adlari: Açık
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 19 Aralık 2015 Pazar
+             turlar: 1.Tur-10:30,2.Tur-10:50,3.Tur-11:10,4.Tur-11:30,5.Tur-11:50
