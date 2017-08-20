@@ -1,5 +1,5 @@
 ---
-title: İTK Marmaris Kampüsü 2. ELO Turnuvası
+title: İTK Marmaris Kampüsü 2. ELO Turnuvası Sona Erdi
 turnuva: 2016-12-10-itk-marmaris-2-elo
 ---
 
