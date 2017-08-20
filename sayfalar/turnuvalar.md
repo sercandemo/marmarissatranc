@@ -26,8 +26,6 @@ layout: default
 
     <tr>
     <td class="col-md-4">
-    {% assign dy = tarihs | date: "%A" %}
-    {{ site.data.tr.[dy] }},
     {{ tarihs | date: "%-d" }}
     {% assign m = tarihs | date: "%-m" | minus: 1 %}
     {{ site.data.tr.months[m] }}
