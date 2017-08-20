@@ -1,0 +1,4 @@
+---
+title: Fotoğraflar
+layout: turnuva
+---
