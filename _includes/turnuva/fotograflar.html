@@ -1,11 +1,14 @@
 {{ content }}
 
+{% if pagedata.facebook-album %}
+{% assign facebook_path = pagedata.facebook-album %}
+{% else %}
+{% assign facebook_path = site.data.constants.facebook-profile %}
+{% endif %}
 <div class="row">
     <div class="col-md-12">
-        <p>Turnuva fotoğraflarına <a href="https://www.facebook.com/profile.php?id=100005340018875" target="_blank">Facebook sayfamızdan</a> ulaşabilirsiniz.</p>
-
-        <a href="https://www.facebook.com/profile.php?id=100005340018875" target="_blank">
-            <img src="{{ site.github.url }}/assets/images/FB-f-Logo__blue_50.png" alt="" class="img-responsive">
+        <p>Turnuva fotoğraflarına <a href="{{ facebook_path }}" target="_blank">Facebook sayfasından</a> ulaşabilirsiniz.</p>
+            <a href="{{ facebook_path }}" target="_blank"><img src="{{ site.github.url }}/assets/images/FB-f-Logo__blue_50.png" alt="" class="img-responsive"></a>
         </a>
     </div>
 </div>
