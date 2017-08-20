@@ -10,11 +10,11 @@ Kayıt için son başvuru tarihi 26 Mayıs 2017 saat 20.00'dir.
 
 Katılım ücreti A Kategorisi için 50 TL, Diğer Kategoriler için 30 TL'dir.
 
-#### [Ödüller](/2017/05/16/oduller)  
-#### [Konaklama](/2017/06/20/konaklama)  
+#### [Ödüller]({{ site.github.url }}/2017/05/16/oduller)  
+#### [Konaklama]({{ site.github.url }}/2017/06/20/konaklama)  
 
-#### [Yönerge](/turnuvalar/2017-05-27-ataturk-kupasi/yonerge)  
-#### [Başvuru](/turnuvalar/2017-05-27-ataturk-kupasi/basvuru)
+#### [Yönerge]({{ site.github.url }}/turnuvalar/2017-05-27-ataturk-kupasi/yonerge)  
+#### [Başvuru]({{ site.github.url }}/turnuvalar/2017-05-27-ataturk-kupasi/basvuru)
 
 #### Kategoriler
 

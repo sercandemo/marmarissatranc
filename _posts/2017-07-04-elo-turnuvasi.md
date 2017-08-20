@@ -9,8 +9,8 @@ Katılım 32 kişi ile sınırlıdır.
 Katılım ücreti 50 TL'dir.   
 Kayıt için son başvuru tarihi 7 temmuz 2017 saat 20:00'dir.  
 
-#### [Yönerge](/turnuvalar/2017-07-08-temmuz-elo/yonerge)  
-#### [Başvuru](/turnuvalar/2017-07-08-temmuz-elo/basvuru)
+#### [Yönerge]({{ site.github.url }}/turnuvalar/2017-07-08-temmuz-elo/yonerge)  
+#### [Başvuru]({{ site.github.url }}/turnuvalar/2017-07-08-temmuz-elo/basvuru)
 
 #### Ödüller
 1. 	Çeyrek Altın
