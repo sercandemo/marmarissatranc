@@ -72,11 +72,11 @@
         <div class="col-md-9">
             <hr> {% assign poffset = paginator.page | times:5 %} {% assign ptotal = paginator.total_pages | minus:1 %} {% for post in site.posts limit:5 offset:poffset %}
             <div class="row">
-
+                {% include image_select.html %}
                 <div class="col-xs-4 col-sm-3 col-md-3">
                     <a href="{{ post.url | prepend: site.github.url }}">
-                        {% if post.image %}
-                          {% assign post-image = post.image %}
+                        {% if imagepath != '' %}
+                          {% assign post-image = imagepath %}
                         {% else %}
                           {% assign post-image = site.data.constants.post-default-image %}
                         {% endif %}
