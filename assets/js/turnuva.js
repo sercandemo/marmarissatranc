@@ -20,7 +20,9 @@ function loadGames(categories, collname) {
         var category = categoryList[c].trim();
         var pgnFileName = collname + "-" + category + ".pgn";
         var resultsFileName = collname + "-siralama-" + category + ".txt";
-        var games = [[]];
+        var games = [
+            []
+        ];
 
         $.get(pgnFileName, function(data) {
 
@@ -28,10 +30,12 @@ function loadGames(categories, collname) {
             for (var line = 0; line < lines.length; line++) {
                 parseGame(lines[line], games);
             }
-            console.log(games);
             writeGamestoTabs(resultsFileName, category, games);
             fillGamesCombobox(category, games);
-        }, "text");
+        }, "text").fail(function() {
+            $('#kategori-' + category).html("<p>Sonuçlar henüz yüklenmedi.</p>");
+            $('#oyunsec-' + category).html("<option value='N.N.N'> Oyunlar henüz yüklenmedi. </option>");
+        });
 
         allGames[category] = games;
     }

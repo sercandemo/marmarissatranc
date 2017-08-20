@@ -1,3 +1,28 @@
 {{ content }}
 
-{{ pagedata.basvuru-form }}
+<div class="row">
+    <div class="col-md-12">
+
+        {% if pagedata.basvuru-form %}
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#basvuru" aria-controls="basvuru" role="tab" data-toggle="tab">Başvuru</a></li>
+            <li role="presentation"><a href="#oyuncular" aria-controls="oyuncular" role="tab" data-toggle="tab">Oyuncular</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="basvuru">
+                <br>
+                <p class="bg-warning">Başvurunuzun oyuncular listesine eklenmesi zaman alabilir. Tekrar başvurmanıza gerek yoktur.</p>
+                <p class="bg-warning">Bilgilerinizi girdikten sonra "Submit" tuşuna basınız.</p>
+                {{ pagedata.basvuru-form }}</div>
+            <div role="tabpanel" class="tab-pane" id="oyuncular">
+                <br>
+                <p class="bg-warning">Başvurunuzun oyuncular listesine eklenmesi zaman alabilir. Tekrar başvurmanıza gerek yoktur.</p>
+                {{ pagedata.basvuru-listesi }}</div>
+        </div>
+        {% else %}
+                <h4>Başvurular için: {{ site.data.constants.contact }}</h4>
+        {% endif %}
+
+    </div>
+</div>

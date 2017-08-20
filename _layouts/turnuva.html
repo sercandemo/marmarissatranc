@@ -23,9 +23,8 @@
 
                   <ul class="nav nav-pills nav-stacked" id="myTabs">
                       <li role="presentation" class="{% if filename == 'index' %}active {% endif %}"><a href="{{ site.github.url }}/turnuvalar/{{ dataname }}"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>  Turnuva</a></li>
-                      <li role="presentation" class="{% if filename == 'program' %}active {% endif %}"><a href="program"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Program</a></li>
+                      <li role="presentation" class="{% if filename == 'yonerge' %}active {% endif %}"><a href="yonerge"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Yönerge</a></li>
                       <li role="presentation" class="{% if filename == 'basvuru' %}active {% endif %}"><a href="basvuru"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  Başvuru</a></li>
-                      <li role="presentation" class="{% if filename == 'oyuncular' %}active {% endif %}"><a href="oyuncular"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Oyuncular</a></li>
                       <li role="presentation" class="{% if filename == 'sonuclar' %}active {% endif %}"><a href="sonuclar"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Sonuçlar</a></li>
                       <li role="presentation" class="{% if filename == 'oyunlar' %}active {% endif %}"><a href="oyunlar"><span class="glyphicon glyphicon-knight" aria-hidden="true"></span>  Oyunlar</a></li>
                       <li role="presentation" class="{% if filename == 'fotograflar' %}active {% endif %}"><a href="fotograflar"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>  Fotoğraflar</a></li>
@@ -60,16 +59,12 @@
           {% include turnuva/index.html %}
         {% endif %}
 
-        {% if filename == 'program' %}
-          {% include turnuva/program.html %}
+        {% if filename == 'yonerge' %}
+          {% include turnuva/yonerge.html %}
         {% endif %}
 
         {% if filename == 'basvuru' %}
           {% include turnuva/basvuru.html %}
-        {% endif %}
-
-        {% if filename == 'oyuncular' %}
-          {% include turnuva/oyuncular.html %}
         {% endif %}
 
         {% if filename == 'sonuclar' %}

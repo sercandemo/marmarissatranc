@@ -28,7 +28,12 @@
 <div class="row">
 
   <div class="col-md-3">
-    <img src="{{ site.github.url }}/assets/images/{{ page.image }}" alt="" class="img-responsive img-thumbnail">
+    {% if page.image %}
+      {% assign post-image = page.image %}
+    {% else %}
+      {% assign post-image = site.data.constants.post-default-image %}
+    {% endif %}
+    <img src="{{ site.github.url }}/assets/images/{{ post-image }}" alt="" class="img-responsive img-thumbnail">
   </div>
 
   <div class="col-md-9">

@@ -1,53 +1,39 @@
-<table class="table table-bordered table-striped">
-    <colgroup>
-        <col class="col-xs-2">
-        <col class="col-xs-6">
-    </colgroup>
+ {{ content }}
 
-    <tbody>
-        <tr>
-            <th scope="row"> Turnuva Adı </th>
-            <td>{{ pagedata.adi }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Başlangıç - Bitiş Tarihleri </th>
-            <td>{{ pagedata.baslama-tarihi }} - {{ pagedata.bitis-tarihi }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Yer </th>
-            <td>{{ pagedata.yeri }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Son Başvuru Tarihi </th>
-            <td>{{ pagedata.son-basvuru-tarihi }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Düşünme Süresi </th>
-            <td>{{ pagedata.dusunme-suresi }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Sistem </th>
-            <td>{{ pagedata.sistem }}</td>
-        </tr>
-        <tr>
-            <th scope="row"> Yönerge </th>
-            <td><a href="{{ dataname }}-yonerge.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Yönerge </a></td> 
-        </tr>
-    </tbody>
-</table>
+{% for post in site.posts %}
+{% if post.turnuva == dataname %}
+<div class="row">
 
-{% if pagedata.oduller.size > 0 %}
-<div class="panel panel-warning">
-    <div class="panel-heading">
-        <h3 class="panel-title">Ödüller</h3> </div>
-    <div class="panel-body">
-        <strong>
-        {% for odul in pagedata.oduller %}
-              <h4 class="text-center">{{ odul.odul }}</h4>
-        {% endfor %}
-      </strong>
-    </div>
+  <div class="col-md-12">
+    <h4>{{ post.title }}</h4>
+    <p class="text-muted text-left">
+    {% assign dy = post.date | date: "%A" %}
+    {{ site.data.tr.[dy] }},
+    {{ post.date | date: "%-d" }}
+    {% assign m = post.date | date: "%-m" | minus: 1 %}
+    {{ site.data.tr.months[m] }}
+    {{ post.date | date: "%Y" }}
+    </p>
+  </div>
+
 </div>
-{% endif %}
 
-{{ content }}
+<div class="row">
+
+  <div class="col-md-9">
+  <p>{{ post.content }}</p>
+  </div>
+
+  <div class="col-md-3">
+    {% if post.image %}
+      {% assign post-image = post.image %}
+    {% else %}
+      {% assign post-image = site.data.constants.post-default-image %}
+    {% endif %}
+    <img src="{{ site.github.url }}/assets/images/{{ post-image }}" alt="" class="img-responsive img-thumbnail">
+  </div>
+
+</div>
+        <hr>
+{% endif %}
+{% endfor %}
