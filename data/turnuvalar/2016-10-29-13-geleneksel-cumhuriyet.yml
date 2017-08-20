@@ -14,9 +14,9 @@ programlar:
        tablo:
            - gun: 28 Ekim 2016 Cuma
              turlar: Son Başvuru-20:00
-           - gun: 29 Ekim 2016 Cuma Cumartesi
+           - gun: 29 Ekim 2016 Cumartesi
              turlar: Teknik Toplantı-10:00, 1.Tur-14:00, 2.Tur-16:30
-           - gun: 30 Ekim 2016 Cuma Pazar
+           - gun: 30 Ekim 2016 Pazar
              turlar: 3.Tur-10:00, 4.Tur-12:30, 5.Tur-15:00, Ödül Töreni-18:00
   - program:
        adi: D
