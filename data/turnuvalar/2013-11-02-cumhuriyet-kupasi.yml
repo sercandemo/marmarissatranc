@@ -1,0 +1,13 @@
+adi: Marmaris 10.Geleneksel Atatürk ve Cumhuriyet Kupası
+
+kategoriler: A
+kategori-adlari: A
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 2 Kasım 2013 Cumartesi
+             turlar: Teknik Toplantı-11:30;1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+           - gun: 3 Kasım 2013 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-12:00, Ödül Töreni-14:00

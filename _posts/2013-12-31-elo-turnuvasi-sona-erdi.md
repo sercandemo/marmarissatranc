@@ -11,5 +11,4 @@ D Kategorisinde yarışan tüm sporcular sıralama yapılmaksızın madalya ile 
 
 Ayrıca turnuva süresince Rus Büyük Usta Ernesto İnarkiev’in yaptığı gösteriler ilgiyle izlendi. GM İnarkiev ilk önce 21 kişiyle aynı anda oynadı ardından 10 kişiyle tahtaya bakmadan körleme simultane gösterisi yaptı. Bütün maçlarını kazanan GM İnarkiev satrançseverlerin takdirini topladı.
 
-
 Turnuva sonuçlarına ve detaylarına [Turnuva Sayfasından]({{ site.github.url }}/turnuvalar/{{ page.turnuva }}) ulaşabilirsiniz.  
