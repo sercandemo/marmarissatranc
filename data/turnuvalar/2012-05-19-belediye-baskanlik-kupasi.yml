@@ -1,0 +1,13 @@
+adi: Marmaris Belediyesi 2012 Başkanlık Kupası
+
+kategoriler: A
+kategori-adlari: A
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 19 Mayıs 2012 Cumartesi
+             turlar: Teknik Toplantı-11:00, 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+           - gun: 20 Mayıs 2012 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-12:00, 5.Tur-14:00, Ödül Töreni-19:00
