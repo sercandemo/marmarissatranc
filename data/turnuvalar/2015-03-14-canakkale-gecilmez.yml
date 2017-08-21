@@ -1,24 +1,23 @@
-adi: 11. Geleneksel Marmaris 23 Nisan Ödüllü ELO Turnuvası
+adi: İndigo “Çanakkale Geçilmez” ELO Satranç Turnuvası
 
 kategoriler: A, B, C, D, E
 kategori-adlari: A, B, C, D, E
 
-facebook-album: https://www.facebook.com/profile.php?id=100005340018875&sk=photos&collection_token=100005340018875:2305272732:69&set=a.408382942683036.1073741834.100005340018875&type=1&pnref=story
-
+facebook-album: https://www.facebook.com/profile.php?id=100005340018875&sk=photos&collection_token=100005340018875:2305272732:69&set=a.321688108019187.1073741829.100005340018875&type=3
 programlar:
   - program:
        adi: A, B, C, D
        tablo:
-           - gun: 17 Nisan 2015 Cuma
+           - gun: 13 Mart 2015 Cuma
              turlar: Son Başvuru-20:00
-           - gun: 18 Nisan 2015 Cumartesi
+           - gun: 14 Mart 2015 Cumartesi
              turlar: Teknik Toplantı-10:00, 1.Tur-13:00, 2.Tur-16:00, 3.Tur-19:00
-           - gun: 19 Nisan 2015 Pazar
+           - gun: 15 Mart 2015 Pazar
              turlar: 4.Tur-10:00, 5.Tur-13:00, 6.Tur-16:00, Ödül Töreni-19:00
   - program:
        adi: E
        tablo:
-           - gun: 17 Nisan 2015 Cuma
+           - gun: 13 Mart 2015 Cuma
              turlar: Son Başvuru-20:00
-           - gun: 19 Nisan 2015 Pazar
+           - gun: 16 Mart 2015 Pazar
              turlar: Teknik Toplantı-13:00, 1.Tur-15:00, 2.Tur-16:00, 3.Tur-17:00, 4.Tur-18:00, Ödül Töreni-19:00
