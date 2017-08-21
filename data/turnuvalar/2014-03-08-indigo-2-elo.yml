@@ -1,0 +1,33 @@
+adi: Marmaris İndigo 2.ELO Satranç Turnuvası
+
+kategoriler: A, B, C, D
+kategori-adlari: A, B, C, D
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 7 Mart 2014 Cuma
+             turlar: Son Başvuru-20:00
+           - gun: 8 Mart 2014 Cumartesi
+             turlar: Teknik Toplantı-10:00; 1.Tur-13:00, 2.Tur-16:00, 3.Tur-19:00
+           - gun: 9 Mart 2014 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-13:00, Ödül Töreni-16:00
+  - program:
+       adi: B, C, D
+       tablo:
+           - gun: 7 Mart 2014 Cuma
+             turlar: Son Başvuru-20:00
+           - gun: 8 Mart 2014 Cumartesi
+             turlar: Teknik Toplantı-10:00; 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+           - gun: 9 Mart 2014 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-12:00, Ödül Töreni-16:00
+  - program:
+       adi: E
+       tablo:
+           - gun: 7 Mart 2014 Cuma
+             turlar: Son Başvuru-20:00
+           - gun: 8 Mart 2014 Cumartesi
+             turlar: Teknik Toplantı-10:00
+           - gun: 9 Mart 2014 Pazar
+             turlar: 1.Tur-11:00, 2.Tur-12:00, 3.Tur-13:00, 4.Tur-14:00, 4.Tur-15:00, Ödül Töreni-18:00
