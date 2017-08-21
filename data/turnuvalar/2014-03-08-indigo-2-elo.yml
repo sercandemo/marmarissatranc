@@ -10,7 +10,7 @@ programlar:
            - gun: 7 Mart 2014 Cuma
              turlar: Son Başvuru-20:00
            - gun: 8 Mart 2014 Cumartesi
-             turlar: Teknik Toplantı-10:00; 1.Tur-13:00, 2.Tur-16:00, 3.Tur-19:00
+             turlar: Teknik Toplantı-10:00, 1.Tur-13:00, 2.Tur-16:00, 3.Tur-19:00
            - gun: 9 Mart 2014 Pazar
              turlar: 4.Tur-10:00, 5.Tur-13:00, Ödül Töreni-16:00
   - program:
@@ -19,7 +19,7 @@ programlar:
            - gun: 7 Mart 2014 Cuma
              turlar: Son Başvuru-20:00
            - gun: 8 Mart 2014 Cumartesi
-             turlar: Teknik Toplantı-10:00; 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+             turlar: Teknik Toplantı-10:00, 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
            - gun: 9 Mart 2014 Pazar
              turlar: 4.Tur-10:00, 5.Tur-12:00, Ödül Töreni-16:00
   - program:
