@@ -1,6 +1,7 @@
 ---
 title: İndigo Ödüllü 5. Yıldırım ELO Turnuvası Sonuçlandı
 turnuva: 2015-12-19-indigo-5-yildirim
+image: yildirim.jpg
 ---
 
 Marmaris İndigo Ödüllü 5. Yıldırım (Blitz) ELO Turnuvası 19 Aralık 2015 Cumartesi günü yapılan maçlarla sona erdi.

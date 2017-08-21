@@ -1,6 +1,7 @@
 ---
 title: Marmaris İndigo 5. Yıldırım ELO Turnuvası
 turnuva: 2015-12-19-indigo-5-yildirim
+image: yildirim.jpg
 ---
 Marmaris İndigo 5. Yıldırım (Blitz) ELO Turnuvası 19 Aralık 2015 Cumartesi günü saat: 10.30’da Marmaris Belediyesi Yüzme Eğitim Merkezi’nde gerçekleştirilecek. 5 dakika + 3 saniye eklemeli zaman temposuyla 5 tur üzerinden oynanacak yarışma sonuçları FIDE’ye gönderilecek ve Blitz ELO hesaplamalarında kullanılacaktır.  
 

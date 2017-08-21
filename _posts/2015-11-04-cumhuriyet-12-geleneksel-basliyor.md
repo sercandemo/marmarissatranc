@@ -12,7 +12,7 @@ Katılım ücreti A kategorisi için 40 TL, diğer kategoriler için 30 TL'dir.
 
 Turnuva sonuçlarına ve detaylarına [Turnuva Sayfasından]({{ site.github.url }}/turnuvalar/{{ page.turnuva }}) ulaşabilirsiniz.  
 
-#### KATEGORİLER
+#### Kategoriler
 * Kategori A: ELO Puanı 2200’ün altında olmak koşuluyla, ELO ya da UKD puanlarından herhangi biri 1250 ve üzeri olan sporcular.
 * Kategori B: ELO ve UKD puanları 1400 ün altında olan ya da puanı olmayan sporcular. Yaş sınırlaması yok.
 * Kategori C: Herhangi bir ELO ya da UKD puanına sahip olmayan 2006 ve sonrası doğumlu sporcular.

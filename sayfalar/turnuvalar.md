@@ -5,6 +5,19 @@ layout: default
 ---
 
 <h3> Turnuvalar </h3>
+
+{% assign myfiles = site.static_files | sort: 'name' | reverse %}
+{% assign turnuva_sayisi = 0 %}
+
+{% for myfile in myfiles %}
+
+{% if myfile.path contains 'data/turnuvalar/' %}
+{% assign turnuva_sayisi = turnuva_sayisi | plus: 1 %}
+{% endif %}
+
+{% endfor %}
+
+<p>Bugüne kadar <strong> {{ turnuva_sayisi }} </strong> turnuva düzenlendi.</p>
 <div class="row">
 
   <div class="col-md-9">
@@ -14,8 +27,6 @@ layout: default
       <th>Tarih</th>
       <th>Turnuva Adı</th>
     </tr>
-
-    {% assign myfiles = site.static_files | sort: 'name' | reverse %}
 
     {% for myfile in myfiles %}
 

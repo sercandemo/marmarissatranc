@@ -1,6 +1,7 @@
 ---
 title: Marmaris İndigo 6. Yıldırım ELO Turnuvası
 turnuva: 2016-03-06-indigo-6-yildirim
+image: yildirim.jpg
 ---
 
 Marmaris İndigo 6. Yıldırım (Blitz) ELO Turnuvası 6 Mart 2016 Pazar günü saat: 10.00’da Marmaris Belediyesi Yüzme Eğitim Merkezi’nde gerçekleştirilecek. 5 dakika + 3 saniye eklemeli zaman temposuyla 5 tur üzerinden oynanacak yarışma sonuçları FIDE’ye gönderilecek ve Blitz ELO hesaplamalarında kullanılacaktır.
