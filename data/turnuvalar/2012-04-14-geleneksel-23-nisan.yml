@@ -1,0 +1,13 @@
+adi: Marmaris 23 Nisan 2012 Satranç Şenliği
+
+kategoriler: A
+kategori-adlari: A
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 14 Nisan 2012 Cumartesi
+             turlar: Teknik Toplantı-11:30, 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+           - gun: 15 Nisan 2012 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-12:00, 6.Tur-14:00, Ödül Töreni-16:00
