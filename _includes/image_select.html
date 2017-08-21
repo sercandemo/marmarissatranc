@@ -3,7 +3,7 @@
                       {% assign imagepath = post.image %}
                     {% else %}
                       {% assign post_filename = post.path | replace_first: '_posts/', '' | replace_first: '.md', '' %}
-                      {% assign post_filename_path = post_filename | prepend:'/assets/images/' %}
+                      {% assign post_filename_path = post_filename | prepend:'/assets/images/' | append: '.' %}
                       {% for static_file in site.static_files %}
                         {% if static_file.path contains post_filename_path %}
                           {% assign imagepath = (post_filename | append: static_file.extname) %}

@@ -7,47 +7,41 @@
 
 <body>
 
-    {% include header.html %}
+    {% include header.html %} {% assign post = page %}
 
-{% assign post = page %}
+    <div class="row">
 
-<div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-9">
+            <h3>{{ post.title }}</h3>
+            <p class="text-muted text-left">
+                {% assign dy = post.date | date: "%A" %} {{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" }}
+            </p>
+        </div>
 
-  <div class="col-md-3">
-  </div>
-  <div class="col-md-9">
-    <h3>{{ post.title }}</h3>
-    <p class="text-muted text-left">
-    {% assign dy = post.date | date: "%A" %}
-    {{ site.data.tr.[dy] }},
-    {{ post.date | date: "%-d" }}
-    {% assign m = post.date | date: "%-m" | minus: 1 %}
-    {{ site.data.tr.months[m] }}
-    {{ post.date | date: "%Y" }}
-    </p>
-  </div>
+    </div>
 
-</div>
+    <div class="row">
 
-<div class="row">
+        <div class="col-md-3">
+            {% include image_select.html %} {% if imagepath != '' %} {% assign post-image = imagepath %} {% else %} {% assign post-image = site.data.constants.post-default-image %} {% endif %}
+            <img src="{{ site.github.url }}/assets/images/{{ post-image }}" alt="" class="img-responsive img-thumbnail">
+        </div>
 
-  <div class="col-md-3">
-    {% include image_select.html %}
-    {% if imagepath != '' %}
-      {% assign post-image = imagepath %}
-    {% else %}
-      {% assign post-image = site.data.constants.post-default-image %}
-    {% endif %}
-    <img src="{{ site.github.url }}/assets/images/{{ post-image }}" alt="" class="img-responsive img-thumbnail">
-  </div>
+        <div class="col-md-9">
+            <p>{{ content }}</p>
 
-  <div class="col-md-9">
-  <p>{{ content }}</p>
-  </div>
+            {% assign post_filename = post.path | replace_first: '_posts/', '' | replace_first: '.md', '' %} {% assign imagenames = '/assets/images/' | append: post_filename | append: '-' %} {% for image in site.static_files %} {% if image.path contains imagenames %}
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="{{ site.github.url }}{{ image.path }}" class="img-responsive" alt="" style="margin-top:10px" />
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
 
-</div>
-
-
+    </div>
     {% include footer.html %} {% include google_analytics.html %}
 </body>
 
