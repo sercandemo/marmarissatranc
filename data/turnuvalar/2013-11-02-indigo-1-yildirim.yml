@@ -1,0 +1,11 @@
+adi: Marmaris İndigo 1. Yıldırım ELO Turnuvası
+
+kategoriler: A
+kategori-adlari: Açık
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 2 Kasım 2013 Pazar
+             turlar: Teknik Toplantı-11:00,1.Tur-15:00
