@@ -1,12 +1,13 @@
-                    {% assign imagepath = '' %}
-                    {% if post.image %}
-                      {% assign imagepath = post.image %}
-                    {% else %}
-                      {% assign post_filename = post.path | replace_first: '_posts/', '' | replace_first: '.md', '' %}
-                      {% assign post_filename_path = post_filename | prepend:'/assets/images/' | append: '.' %}
-                      {% for static_file in site.static_files %}
-                        {% if static_file.path contains post_filename_path %}
-                          {% assign imagepath = (post_filename | append: static_file.extname) %}
-                        {% endif %}
-                      {% endfor %}
-                    {% endif %}
+{%- assign post_image = '' -%}
+{%- if post.image -%}
+  {%- assign post_image = post.image -%}
+{%- else -%}
+  {%- assign post_filename = post.path | replace_first: '_posts/', '' | replace_first: '.md', '' -%}
+  {%- assign post_filename_path = post_filename | prepend: site.data.constants.image_path | append: '.' -%}
+  {%- for static_file in site.static_files -%}
+    {%- if static_file.path contains post_filename_path -%}
+      {%- assign post_image = (post_filename | append: static_file.extname) -%}
+      {%- break -%}
+  {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

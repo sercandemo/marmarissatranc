@@ -1,23 +1,26 @@
 {{ content }}
 
-{% if pagedata.facebook-album %}
-{% assign facebook_path = pagedata.facebook-album %}
-{% else %}
-{% assign facebook_path = site.data.constants.facebook-profile %}
-{% endif %}
+{%- if pagedata.facebook-album -%}
+  {% assign facebook_path = pagedata.facebook-album %}
+{%- else -%}
+  {% assign facebook_path = site.data.constants.facebook-profile %}
+{%- endif -%}
 <div class="row">
     <div class="col-md-12">
         <p>Turnuva fotoğraflarına <a href="{{ facebook_path }}" target="_blank">Facebook sayfasından</a> ulaşabilirsiniz.</p>
-            <a href="{{ facebook_path }}" target="_blank"><img src="{{ site.github.url }}/assets/images/FB-f-Logo__blue_50.png" alt="" class="img-responsive"></a>
+            <a href="{{ facebook_path }}" target="_blank"><img src="{{ site.github.url }}{{ site.data.constants.image_path }}FB-f-Logo__blue_50.png" alt="" class="img-responsive"></a>
         </a>
     </div>
 </div>
 
+{% assign myfiles = site.static_files %}
 
-{% assign imagenames = '/assets/images/' | append: dataname %} {% for image in site.static_files %} {% if image.path contains imagenames %}
-<div class="row">
-    <div class="col-md-12">
-        <img src="{{ site.github.url }}{{ image.path }}" class="img-responsive" alt="image" style="margin-top:10px"/>
+{%- for image in myfiles -%}
+  {%- if image.path contains turnuva_kodu -%}
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{ site.github.url }}{{ image.path }}" class="img-responsive" alt="" style="margin-top:10px"/>
+        </div>
     </div>
-</div>
-{% endif %} {% endfor %}
+  {%- endif -%}
+{%- endfor -%}

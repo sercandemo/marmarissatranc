@@ -1,0 +1,29 @@
+<h3>{{ post.title }}</h3>
+<p class="text-muted text-left">
+    {% include date_format.html %}
+</p>
+
+{% include image_select.html %}
+{%- if post_image != '' -%}
+  <img src="{{ site.github.url }}{{site.data.constants.image_path}}{{ post_image }}" alt="" class="img-responsive img-thumbnail center-block" style="margin-top:15px">
+{%- endif -%}
+<p>{{ post.content }}</p>
+
+{%- if dataname and filename != 'index' -%}
+<p>Turnuva ait tüm detaylara <a href="{{ site.github.url }}/turnuvalar/{{dataname}}">turnuva sayfasından</a> ulaşabilirsiniz.</p>
+{%- endif -%}
+
+{%- if dataname and post.odul -%}
+<h4>Ödüller</h4>
+{% include oduller.html kazanan=post.odul %}
+{%- endif -%}
+
+{% assign imagenames = site.data.constants.image_path | append: post_filename | append: '-' %}
+{%- for image in site.static_files -%}
+{%- if image.path contains imagenames -%}
+<div class="row">
+    <div class="col-md-12">
+        <img src="{{ site.github.url }}{{ image.path }}" class="img-responsive" alt="" style="margin-top:10px" />
+    </div>
+</div>
+{%- endif -%} {%- endfor -%}

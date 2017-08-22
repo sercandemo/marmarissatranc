@@ -1,0 +1,31 @@
+adi: Marmaris Belediyesi 2012 Başkanlık Kupası
+
+kategoriler: A
+kategori-adlari: A
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 19 Mayıs 2012 Cumartesi
+             turlar: Teknik Toplantı-11:00, 1.Tur-13:00, 2.Tur-15:00, 3.Tur-17:00
+           - gun: 20 Mayıs 2012 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-12:00, 6.Tur-14:00, Ödül Töreni-19:00
+
+oduller:
+  - kategori:
+      adi: Gençler
+      oduller: 1. Kupa ve Tam Altın, 2. Kupa ve Yarım Altın, 3. Kupa ve Çeyrek Altın
+      kazananlar: 1. Sinan Sakaoğlu, 2. Osman Yatkın, 3. Ufukcan Tütüncü
+  - kategori:
+      adi: Yıldızlar
+      oduller: 1. Kupa ve Tam Altın, 2. Kupa ve Yarım Altın, 3. Kupa ve Çeyrek Altın, En iyi Marmarisli - Madalya ve Çeyrek Altın
+      kazananlar: 1. Onat Uğur Aslan, 2. Senan Utku Öntürk, 3. Ferat Caner Hafızoğlu, Ali Gürdoğan
+  - kategori:
+      adi: Küçükler
+      oduller: 1. Kupa ve Tam Altın, 2. Kupa ve Yarım Altın, 3. Kupa ve Çeyrek Altın, En iyi Marmarisli - Madalya ve Çeyrek Altın
+      kazananlar: 1. Cenker Eren Tan, 2. Mustafa Kavukçu, 3. Fatih Eren Alkaya, Alparslan Güler
+  - kategori:
+      adi: Minikler
+      oduller: 1. Kupa ve Tam Altın, 2. Kupa ve Yarım Altın, 3. Kupa ve Çeyrek Altın, En iyi Marmarisli - Madalya ve Çeyrek Altın
+      kazananlar: 1. Deniz Serin, 2. Bengi Hafızoğlu, 3. Toprak Can Mutlukan, Derin Ağar

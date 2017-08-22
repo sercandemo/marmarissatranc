@@ -1,4 +1,0 @@
----
-title: Başvuru
-layout: turnuva
----

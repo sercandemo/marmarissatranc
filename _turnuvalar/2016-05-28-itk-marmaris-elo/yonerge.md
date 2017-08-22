@@ -1,4 +1,0 @@
----
-title: Yönerge
-layout: turnuva
----

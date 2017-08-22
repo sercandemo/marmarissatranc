@@ -1,0 +1,35 @@
+
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-2">
+        <col class="col-xs-3">
+        {% if include.kazanan == 1 %} <col class="col-xs-3"> {% endif %}
+    </colgroup>
+
+    <thead>
+        <tr>
+            <th>Kategori</th>
+            <th>Ödül</th>
+            {% if include.kazanan == 1 %} <th>Kazanan</th> {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for o in site.data.turnuvalar[dataname].oduller %}
+        {% assign oduller = o.kategori.oduller | split: "," %}
+        {% if include.kazanan == 1 %} {% assign kazananlar = o.kategori.kazananlar | split: "," %} {% endif %}
+        <tr class="{{ site.data.constants.odul-renk[forloop.index0] }}">
+            <td scope="row" rowspan="{{ oduller | size }}"> {{ o.kategori.adi }}</td>
+            <td> {{ oduller[0] }} </td>
+            {% if include.kazanan == 1 %} <td> {{ kazananlar[0] }} </td> {% endif %}
+        </tr>
+        {% if o.kategori.oduller contains "," %}
+        {% assign disforindex = forloop.index0 %}
+        {% for odul in oduller offset:1 %}
+        <tr class="{{ site.data.constants.odul-renk[disforindex] }}">
+            <td> {{ odul }} </td>
+            {% if include.kazanan == 1 %} <td> {{ kazananlar[forloop.index] }} </td> {% endif %}
+        </tr>
+        {% endfor %} {% else %} {% endif %} {% endfor %}
+
+    </tbody>
+</table>

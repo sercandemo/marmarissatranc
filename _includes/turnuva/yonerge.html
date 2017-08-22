@@ -1,4 +1,4 @@
-{{ content }} {% assign kategoriler = pagedata.kategoriler | split: "," %}
+{{ content }}
 
 <table class="table table-bordered table-striped">
     <colgroup>
@@ -21,10 +21,8 @@
                     <li><a href="{{ dataname }}-yonerge-{{ kategori | strip}}.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori-{{ kategori | strip }} </a></li>{% endfor %}
                     </ul>
                 {% else %}
-                    <a href="{{ dataname }}-yonerge-A.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori </a>
+                    <a href="{{ dataname }}-yonerge.pdf" target="_blank"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Kategori </a>
                 {% endif %}
-
-
             </td>
         </tr>
     </tbody>
@@ -56,7 +54,6 @@
             <td> {{ turlar[0] | split: "-" | last }} </td>
         </tr>
         {% if p.turlar contains "," %}
-        </tr>
         {% for t in turlar offset:1 %}
         <tr>
             <td> {{ turlar[forloop.index] | split: "-" | first }} </td>
@@ -67,16 +64,9 @@
     </tbody>
 </table>
 <div style="margin-top:30px"> </div>
-{% endfor %} {% endif %} {% if pagedata.oduller.size > 0 %}
-<div class="panel panel-warning">
-    <div class="panel-heading">
-        <h3 class="panel-title">Ödüller</h3> </div>
-    <div class="panel-body">
-        <strong>
-        {% for odul in pagedata.oduller %}
-              <h4 class="text-center">{{ odul.odul }}</h4>
-        {% endfor %}
-      </strong>
-    </div>
-</div>
+{% endfor %} {% endif %}
+
+{% if pagedata.oduller.size > 0 %}
+<h4> Ödüller </h4>
+{% include oduller.html kazanan=1 %}
 {% endif %}

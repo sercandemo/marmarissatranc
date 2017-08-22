@@ -1,4 +1,0 @@
----
-title: Oyunlar
-layout: turnuva
----

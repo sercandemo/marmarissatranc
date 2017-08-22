@@ -1,0 +1,1 @@
+{% assign dy = post.date | date: "%A" %}{{ site.data.tr.[dy] }}, {{ post.date | date: "%-d" }}{% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.data.tr.months[m] }} {{ post.date | date: "%Y" -}}

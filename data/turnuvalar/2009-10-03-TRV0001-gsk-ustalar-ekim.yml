@@ -1,0 +1,15 @@
+adi: Marmaris Belediyesi GSK Ekim Ayı Ustalar Satranç Turnuvası
+
+kategoriler: A
+kategori-adlari: A
+
+programlar:
+  - program:
+       adi: A
+       tablo:
+           - gun: 2 Ekim 2009 Cuma
+             turlar: Son Başvuru-17:00
+           - gun: 3 Ekim 2009 Cumartesi
+             turlar: Teknik Toplantı-09:30, 1.Tur-10:00, 2.Tur-14:00, 3.Tur-18:00
+           - gun: 4 Ekim 2009 Pazar
+             turlar: 4.Tur-10:00, 5.Tur-14:00, Ödül Töreni-18:00

@@ -23,12 +23,6 @@ body {
   margin-bottom: 10px;
 }
 
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #myCarousel .carousel-caption {
   left:0;
 	right:0;
